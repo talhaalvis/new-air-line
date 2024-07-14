@@ -33,27 +33,34 @@ const Home = () => {
         onCancel={() => setModalVisible(false)}
         footer={null} // Hide the footer
       >
-        <Typography sx={{color:'#000',fontSize:'17px',fontWeight:400}}>Looking for better Deals? YES, we have more for you!</Typography>
-        <Typography sx={{color:'#333',fontSize:'14px',mt:'20px'}}>That's correct. Talk to our friendly agents to check the additional unadvertised fares. We will be happy to quote you the multiple travelling options with our price guaranteed commitment !</Typography>
-        <Typography sx={{color:'#333',fontSize:'14px',mt:'20px'}}>So, what else are you waiting for?</Typography>
+        <Typography sx={{color:'#000',fontSize:'17px',fontWeight:400}}>In Search of Unbeatable Deals? Yes, we have an extensive selection just for you!</Typography>
+        <Typography sx={{color:'#333',fontSize:'14px',mt:'20px'}}>That's right. Connect with our welcoming team to explore special prices that you won't find advertised anywhere else. We're ready to offer you an array of travel options, each with our guaranteed seal of the lowest price!</Typography>
+        <Typography sx={{color:'#333',fontSize:'14px',mt:'20px'}}>What are you waiting for?</Typography>
+        <Typography sx={{color:'#333',fontSize:'14px',mt:'20px'}}>Exclusive travel offers await you.</Typography>
+        
         <Box sx={{display:'flex',alignItems:'center'}}>
 
-        <Typography sx={{color:'#000',fontSize:'14px',mt:'20px'}}>Call Now Free :</Typography>
+        <Typography sx={{color:'#000',fontSize:'14px',mt:'20px'}}>Call  </Typography>
         <a
-                href="tel:+442080041191"
+                href="tel:+441494416425"
                 style={{
-                  marginTop:'10px',
+                  marginTop:'12px',
+                  marginLeft:'3px',
                   textDecoration: "none",
                   color: "inherit",
                   fontWeight: 700,
                   fontSize: "20px",
-                  color: '#e30425'
+                  color: '#e30425',
+                  marginRight:'3px',
+                  paddingTop:'3px'
                 }}
               >
-                +44 208 0041 191
+               +44 1494 416425 
               </a>
+              <Typography sx={{color:'#000',fontSize:'14px',mt:'20px'}}>for free! </Typography>
         </Box>
-                <Typography sx={{color:'#333',fontSize:'12px',mt:'5px'}}>(Mon - Sat : 9:00AM - 6:00PM)</Typography>
+        <Typography sx={{color:'#333',fontSize:'14px',mt:'10px'}}>Guaranteed best prices.</Typography>
+                <Typography sx={{color:'#333',fontSize:'12px',mt:'5px'}}>(Open Monday - Saturday, 9:00 AM to 6:00 PM)</Typography>
                 <Button sx={{background:'#337ab7',color:'#ffffff',mt:'30px'}} onClick={()=>setModalVisible(false)}>May be Later !</Button>
 
       </Modal>

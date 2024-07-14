@@ -51,7 +51,7 @@ const Booking = () => {
                         <Typography sx={{ mt: '10px' }}>
                         To book efficiently with Fly Safari UK, simply call our travel experts
                          at  
-                         <a href="tel:+447523458826">+44 752 3458 826</a>, request a callback via our website, or utilize our online chat feature for assistance.
+                         <a href="tel:+441494416425">+44 1494 416425</a>, request a callback via our website, or utilize our online chat feature for assistance.
                         </Typography>
                         <Typography sx={{ mt: '10px', color: theme.headingtext, fontWeight: theme.headingtext, fontSize: theme.headingtext }}>
                         How are these tickets different than buying a ticket from the airline directly?

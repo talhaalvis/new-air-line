@@ -1,6 +1,6 @@
-import { Box, Button, Typography } from "@mui/material";
-import { AutoComplete, DatePicker, Form, Select } from "antd";
-import React, { useState } from "react";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import { AutoComplete,  DatePicker, Form, Input, Select } from "antd";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom/dist";
 // import { useNavigate } from 'react-router-dom/dist';
 
@@ -33,7 +33,7 @@ const destinationData = [
   { name: "Birmingham Airport", code: "BHX" },
   { name: "Manchester Airport", code: "MAN" },
 ];
-const fromData=[ { name: "Freetown", code: "FNA" },
+const fromData = [{ name: "Freetown", code: "FNA" },
 { name: "Lagos ", code: "LOS" },
 { name: "Harare", code: "HRE" },
 { name: "Johannesburg", code: "JNB" },
@@ -74,6 +74,7 @@ const CustomTab = ({ r }) => {
   const [inputFocused, setInputFocused] = useState(false);
   const [inputFromFocused, setInputFromFocused] = useState(false);
   const [selectFocused, setSelectFocused] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
   // Initial count of children
   const [formValues, setFormValues] = useState({
     from: "",
@@ -84,6 +85,9 @@ const CustomTab = ({ r }) => {
     children: 0,
     economy: "Any",
     airlines: "All Airlines",
+    name: '',
+    email: '',
+    contact: ''
   });
   const navigate = useNavigate();
 
@@ -94,7 +98,14 @@ const CustomTab = ({ r }) => {
     navigate(`/details/${formValues.to}`, { state: { formValues } });
     // navigate(`/search?${searchParams.toString()}`);
   };
-  
+  useEffect(() => {
+    const { name, contact, email } = formValues;
+    if (name && contact && email) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [formValues]);
  
   const handleAdultsIncrement = () => {
     setAdults(adults + 1);
@@ -152,6 +163,7 @@ const CustomTab = ({ r }) => {
       destination.code.toLowerCase().includes(searchValueFrom.toLowerCase())
   );
   const handleChange = (name, value) => {
+
     if (name === "from" && !value) {
       setInputFromFocused(true);
     } else if (name === "to" && !value) {
@@ -388,6 +400,70 @@ const CustomTab = ({ r }) => {
         <Box
           sx={{
             display: "flex",
+            flexDirection: { sm: "row", xs: "column" },
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "10px",
+          }}
+        >
+          <Form.Item className="form_width"
+
+          >
+            <Typography variant="h6" style={{ color: "white" }}>
+              Name
+            </Typography>
+            <Input name="name"
+              // value={formValues.name}
+              // value={formValues.name}
+              onChange={(e) => handleChange(e.target.name, e.target.value)} // Connect handleChange to AutoComplete's onChange event
+              value={formValues.name}
+              style={{
+                background: "white",
+                borderRadius: "3px",
+                height: "50px",
+                border: "none",
+                width: "100%",
+              }} />
+          </Form.Item>
+
+          <Form.Item className="form_width" name='email' required>
+            <Typography variant="h6" style={{ color: "white" }}>
+              Email
+            </Typography>
+            <Input type="email" 
+            name="email"
+               onChange={(e) => handleChange(e.target.name, e.target.value)} // Connect handleChange to AutoComplete's onChange event
+               value={formValues.email}
+            style={{
+              background: "white",
+              borderRadius: "3px",
+              height: "50px",
+              border: "none",
+              width: "100%",
+            }} />
+          </Form.Item>
+          <Form.Item className="form_width" name='contact' required>
+            <Typography variant="h6" style={{ color: "white" }}>
+              Contact
+            </Typography>
+            <Input type="text" 
+            name="contact"
+               onChange={(e) => handleChange(e.target.name, e.target.value)} // Connect handleChange to AutoComplete's onChange event
+               value={formValues.contact}
+            style={{
+              background: "white",
+              borderRadius: "3px",
+              height: "50px",
+              border: "none",
+              width: "100%",
+            }} />
+          </Form.Item>
+
+
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
             flexDirection: {
               xs: "column",
               sm: "row",
@@ -536,6 +612,7 @@ const CustomTab = ({ r }) => {
                 color: "white",
                 marginTop: "10px",
               }}
+              disabled={!isFormValid}
               label="Choose your Origion"
               onClick={handleSearchNavigate}
             >

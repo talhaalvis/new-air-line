@@ -3,13 +3,20 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { Box, CardActions, CardContent, CardMedia, Container, Typography } from '@mui/material';
-import img1 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.44 AM.jpeg'
-import img2 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.45 AM (1).jpeg'
+// import img1 from '../../../assets/WhatsApp Image 2024-06-15 at 12.11.07 PM.jpeg'
+import img2 from '../../../assets/kenya-airways.png'
 import img3 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.45 AM.jpeg'
 import img4 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.46 AM (1).jpeg'
 import img5 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.46 AM.jpeg'
 import img6 from '../../../assets/i6.png'
-import img7 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.47 AM.jpeg'
+import img7 from '../../../assets/tap.png'
+import img8 from '../../../assets/turkish-airlines.png'
+import img9 from '../../../assets/virign atlantic.jpg'
+import img11 from '../../../assets/iberia.png'
+import img12 from '../../../assets/e-airline.png'
+import img13 from '../../../assets/royal-air-maroc.png'
+import img14 from '../../../assets/brussels.jpg'
+import img15 from '../../../assets/Lufthansa-Logo-700x394.png'
 import img10 from '../../../assets/WhatsApp Image 2024-05-24 at 11.29.48 AM.jpeg'
 import Carousel from 'react-material-ui-carousel';
 import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
@@ -18,15 +25,15 @@ import { useNavigate } from 'react-router-dom';
  // Total number of items
 
 const items = [
-  {
-    // name: "Freetown",
-    img: img1,
-    // description: "From LHR",
-    // start: "Starting From",
-    // price: '499',
-    // person: '1',
-    // return: 'Return Incl. Taxes'
-  },
+  // {
+  //   // name: "Freetown",
+  //   img: img1,
+  //   // description: "From LHR",
+  //   // start: "Starting From",
+  //   // price: '499',
+  //   // person: '1',
+  //   // return: 'Return Incl. Taxes'
+  // },
   {
     name: "Lagos",
     img: img2,
@@ -65,7 +72,7 @@ const items = [
   },
   {
     name: "Lusaka",
-    img: img7,
+    img: img6,
     description: "From LHR",
     start: "Starting From",
     price: '565',
@@ -83,7 +90,70 @@ const items = [
   },
   {
     // name: "Accra",
-    img: img6,
+    img: img7,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img8,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img9,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img11,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img12,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img13,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img14,
+    description: "From LHR",
+    start: "Starting From",
+    price: '572',
+    person: '1',
+    return: 'Return Incl. Taxes'
+  },
+  {
+    // name: "Accra",
+    img: img15,
     description: "From LHR",
     start: "Starting From",
     price: '572',

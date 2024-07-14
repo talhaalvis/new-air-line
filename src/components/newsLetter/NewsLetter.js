@@ -46,7 +46,7 @@ const NewsLetter = () => {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', mt: '15px' }}>
                             <PhoneOutlined sx={{ color: "#ffd71e" }} />
                             <Typography sx={{ color: 'white' }}>
-                                <a href="tel:+442080041191" style={{ textDecoration: 'none', color: 'inherit' }}>+44 208 0041 191</a>
+                                <a href="tel:+441494416425" style={{ textDecoration: 'none', color: 'inherit' }}>+44 1494 416425</a>
                             </Typography>
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', mt: '15px' }}>
